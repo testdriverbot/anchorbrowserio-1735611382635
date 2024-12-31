@@ -1,0 +1,12 @@
+version: 4.1.32
+steps:
+  - prompt: Click the "Book a demo" button in the navigation bar.
+    commands:
+      - command: hover-text
+        text: Book a demo
+        description: button in the navigation bar
+        action: click
+  - prompt: Fill in the demo booking form with test data.
+    commands:
+      - command: wait-for-text
+        text: Name
