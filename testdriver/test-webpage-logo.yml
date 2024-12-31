@@ -1,0 +1,16 @@
+version: 4.1.32
+steps:
+  - prompt: Open the website in the browser.
+    commands:
+      - command: hover-text
+        text: Search Google or type a URL
+        description: address bar in Google Chrome
+        action: click
+      - command: type
+        text: https://example.com
+  - prompt: >-
+      Assert that the logo is visible on the page.  # Use the content of the
+      file from the environment
+    commands:
+      - command: assert
+        expect: the logo is visible in the top left corner of the page
